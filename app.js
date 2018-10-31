@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const json2xls = require('json2xls');
+const fs = require('fs');
 
 const app = express();
 
@@ -22,12 +23,14 @@ app.post('/send-data', (req, res) => {
 
   return res.sendFile(`data-${id}.xlsx`, { root: 'uploads/' }, function(err) {
     if (err) {
-      logger.error(err);
+      console.log(err);
     } else {
-      logger.info('Sent:', fileName);
+      console.log('Sent:', fileName);
     }
   });
-})
+});
+
+app.use(express.static(__dirname + '/public'));
 
 app.listen(3000, () => {
   console.log("App listening at port 3000");
