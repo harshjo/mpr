@@ -1,0 +1,9 @@
+.tab {
+ 	display: none;
+}
+label{
+	font-size: 1.2rem !important;
+}
+form{
+	margin : 5%;
+}

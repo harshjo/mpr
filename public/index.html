@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+	<!-- <h2 id="heading">Questionnaire for Primary Health Care Model</h2> -->
+	
+
+	<form id="xform" action="" method="">
+		<div class="row">
+			<div class="col s12">
+				<div class="card">
+					
+					<div class="card-action teal lighten-1 white-text">
+						
+                        <h3 id="fh1">PERSONAL DETAILS</h3>
+
+					</div>
+					
+					<div class="card-content" id="add_tab_div">
+						
+						<div class="tab">
+              
+                            <h4><i class="material-icons prefix">perm_identity</i> Household head details</h4>
+					     
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input name="first_name" type="text">
+                                    <label for="first_name">First Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input name="last_name" type="text">
+                                    <label for="last_name">Last Name</label>
+                                </div>     
+                            </div>
+               
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input type="number" name="age" min="1" max="110">
+                                    <label for="age">Age</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input name="profession" type="text">
+                                    <label for="profession">Profession</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <!-- <i class="material-icons prefix">explore</i> -->
+                                    <input name="address" type="text">
+                                    <label for="address">Address</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s6">
+                                    <label>
+                                        <input class="with-gap" name="gender" type="radio"  value="male" />
+                                        <span>Male</span>
+                                    </label>
+                                </div>
+                                <div class="col s6">
+                                    <label>
+                                        <input class="with-gap" name="gender" type="radio"  value="female" />
+                                        <span>Female</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                            <div class="input-field col s6">
+                                <input name="height" type="number" min="1" max="274">
+                                <label for="height">Height (Cm)</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input name="weight" type="number" min="1" max="635">
+                                <label for="weight">Weight (kg)</label>
+                            </div>
+                            </div>
+
+						</div>
+
+                        <div class="tab">
+                            <h4><i class="material-icons prefix">group</i> Family Details</h4>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input name="no_family_members" type="number" min="1" max="10" id="no_mems">
+                                    <label for="no_family_members">No. of family members</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <h5>Monthly Family Income</h5>
+                                <div class="col s6">
+                                    <label>
+                                        <input class="with-gap" name="mon_fam_income" type="radio"  value="below5000" />
+                                        <span>Below 5,000</span>
+                                    </label>
+                                </div>
+                                <div class="col s6">
+                                    <label>
+                                        <input class="with-gap" name="mon_fam_income" type="radio"  value="5000-10000" />
+                                        <span>5,000 - 10,000</span>
+                                    </label>
+                                </div>
+                                <div class="col s6">
+                                    <label>
+                                        <input class="with-gap" name="mon_fam_income" type="radio"  value="10000-15000" />
+                                        <span>10,000 - 15,000</span>
+                                    </label>
+                                </div>
+                                <div class="col s6">
+                                    <label>
+                                        <input class="with-gap" name="mon_fam_income" type="radio"  value="above15000" />
+                                        <span>Above 15,000</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Education</h4>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="number" name="last_class_attended" min="0" max="12">
+                                    <label for="last_class_attended">Last class attended/attending</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h5>Main reason to attend school</h5>
+                                <div class="input-field col s12">
+                                    <label>
+                                        <input class="with-gap" name="reason_to_join_school" type="radio"  value="meals" />
+                                        <span>Meals</span>
+                                    </label> 
+                                </div>
+                                <div class="input-field col s12">
+                                    <label>
+                                        <input class="with-gap" name="reason_to_join_school" type="radio"  value="financial_aid" />
+                                        <span>Financial Aid</span>
+                                    </label> 
+                                </div>
+                                <div class="input-field col s12">
+                                    <label>
+                                        <input class="with-gap" name="reason_to_join_school" type="radio"  value="education" />
+                                        <span>Education</span>
+                                    </label> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab" id="mem_details">
+                            <h4>Details of family member(s)</h4>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input name="mem_first_name" type="text">
+                                    <label for="mem_first_name">First Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input name="mem_last_name" type="text">
+                                    <label for="mem_last_name">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input name="mem_relationship" type="text">
+                                    <label for="mem_relationship">Relationship</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input type="number" name="age" min="1" max="110">
+                                    <label for="age">Age</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <label>
+                                        <input class="with-gap" name="mem_gender" type="radio"  value="male" />
+                                        <span>Male</span>
+                                    </label>
+                                </div>
+                                <div class="col s6">
+                                    <label>
+                                        <input class="with-gap" name="mem_gender" type="radio"  value="female" />
+                                        <span>Female</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                        <label>
+                                            <input class="with-gap" name="marital_status" type="radio"  value="married" />
+                                            <span>Married</span>
+                                        </label>
+                                    </div>
+                                    <div class="col s6">
+                                        <label>
+                                            <input class="with-gap" name="marital_status" type="radio"  value="single" />
+                                            <span>Single</span>
+                                        </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                        <label>
+                                            <input class="with-gap" name="employment_status" type="radio"  value="employed" />
+                                            <span>Employed</span>
+                                        </label>
+                                    </div>
+                                    <div class="col s6">
+                                        <label>
+                                            <input class="with-gap" name="employment_status" type="radio"  value="unemployed" />
+                                            <span>Unemployed</span>
+                                        </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input name="mem_uidai" type="text">
+                                    <label for="mem_uidai">Aadhar number</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4> <i class="material-icons prefix">thumb_up</i> You have completed Part 1!</h4>
+                        </div>
+
+
+                        <div class="tab">
+                            <h4>How would you evaluate your overall health?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="overall_health" value="good" checked/>
+                                    <span>Good</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="overall_health" value="Mild" />
+                                    <span>Mild</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="overall_health" value="Moderate" />
+                                    <span>Moderate</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="overall_health" value="Severly Ill" />
+                                    <span>Severly Ill</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="overall_health" value="Chronic" />
+                                    <span>Chronic</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Do you have any genetic problems? If yes, what is it?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="genetic_problems" value="bp"/>
+                                    <span>B.P</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="genetic_problems" value="diabetes" />
+                                    <span>Diabetes</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="genetic_problems" value="thalesemia" />
+                                    <span>Thalesemia</span>
+                                </label>
+                            </p>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input type="text" name="genetic_problems">
+                                    <label for="genetic_problems">Others</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>What was the last time you got a health checkup?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="last_health_checkup" value="past_two_weeks" checked/>
+                                    <span>Past two weeks</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="last_health_checkup" value="before_a_month" />
+                                    <span>Before a month</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="last_health_checkup" value="before_two_months" />
+                                    <span>Before two months</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="last_health_checkup" value="before_six_months" />
+                                    <span>Before Six Months</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>What type of food do you consume?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="food_type" value="type_1" checked/>
+                                    <span>Potato Items</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="food_type" value="type_2" />
+                                    <span>Rice and potato</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="food_type" value="type_3" />
+                                    <span>Rice, pulses and Potato</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="food_type" value="type_4" />
+                                    <span>Chapati and vegetables</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="food_type" value="type_5" />
+                                    <span>Chapati, vegetables and alcohol</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>What is the source of drinking water?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="water_source" value="municipal_taps" checked/>
+                                    <span>Municipal taps</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="water_source" value="storage_tanks" />
+                                    <span>Storage tanks</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="water_source" value="water_tankers" />
+                                    <span>Water tankers</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="water_source" value="others" />
+                                    <span>Others</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>What kind of problems do you usually face?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="usually_faced_problems" value="fever"/>
+                                    <span>Fever</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="usually_faced_problems" value="flu" />
+                                    <span>Flu</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="usually_faced_problems" value="cold_cough" />
+                                    <span>Cold and cough</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="usually_faced_problems" value="stomach_ache"/>
+                                    <span>Stomach Ache</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="usually_faced_problems" value="muscular_pains" />
+                                    <span>Muscular pains</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="usually_faced_problems" value="headache" />
+                                    <span>Headache</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="usually_faced_problems" value="skin_problems" />
+                                    <span>Skin problems</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="usually_faced_problems" value="breathing_problems" />
+                                    <span>Breathing problems</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Are you suffering from any chronic conditions?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="chronic_conditions" value="arthritis"/>
+                                    <span>Arthritis</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="chronic_conditions" value="cancer" />
+                                    <span>Cancer</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="chronic_conditions" value="chronic_pain" />
+                                    <span>Chronic pain</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="chronic_conditions" value="depression"/>
+                                    <span>Depression</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="chronic_conditions" value="diabetes" />
+                                    <span>Diabetes</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="chronic_conditions" value="heart_disease" />
+                                    <span>Heart disease</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="chronic_conditions" value="high_bp" />
+                                    <span>High BP</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="chronic_conditions" value="asthma" />
+                                    <span>Asthma</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>How much do you spend monthly on health related problems?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="monthly_expenditure_on_health" value="below1000" checked/>
+                                    <span>Below 1,000</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="monthly_expenditure_on_health" value="1000-2000" />
+                                    <span>1,000 - 2,000</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="monthly_expenditure_on_health" value="2000-3000" />
+                                    <span>2,000 - 3,000</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="monthly_expenditure_on_health" value="above3000" />
+                                    <span>3,000 or above</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>How much are you willing to pay on your health per day?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="willing_daily_expenditure_on_health" value="1rs" checked/>
+                                    <span>Rs. 1</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="willing_daily_expenditure_on_health" value="2rs" />
+                                    <span>Rs. 2</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="willing_daily_expenditure_on_health" value="3rs" />
+                                    <span>Rs. 3</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="willing_daily_expenditure_on_health" value="4rs" />
+                                    <span>Rs. 4</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>How frequently do you visit a hospital?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="hospital_visit_freq" value="once_a_week" checked/>
+                                    <span>Once a week</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="hospital_visit_freq" value="twice_a_week" />
+                                    <span>Twice a week</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="hospital_visit_freq" value="monthly" />
+                                    <span>Monthly</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="hospital_visit_freq" value="others" />
+                                    <span>None of the above</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>What type of hospital would you prefer?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="hospital_type_prefered" value="public" />
+                                    <span>Public</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="hospital_type_prefered" value="private" />
+                                    <span>Private</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Are you aware of all the vaccinations and any health problems that may occour?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="health_awareness" value="yes" />
+                                    <span>Yes</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="health_awareness" value="yes_but_not_all" />
+                                    <span>Yes but not all</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="health_awareness" value="no" />
+                                    <span>No</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Are your children fully immunized?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="children_fully_immunized" value="yes" />
+                                    <span>Yes</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="children_fully_immunized" value="no" />
+                                    <span>No</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="children_fully_immunized" value="no_children" />
+                                    <span>No Children</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>What is the birth control options used?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap"  name="birth_control_options" value="contraceptory_pills" />
+                                    <span>Contraceptory pills</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="birth_control_options" value="condoms" />
+                                    <span>Condoms</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="birth_control_options" value="sterlization" />
+                                    <span>Sterlization</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="birth_control_options" value="tubectomy" />
+                                    <span>Tubectomy</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="birth_control_options" value="none" />
+                                    <span>None of them</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Do you smoke?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="smoker" value="yes" />
+                                    <span>Yes</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="smoker" value="no" />
+                                    <span>No</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Are you Anaemic?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="anemic" value="yes" />
+                                    <span>Yes</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="anemic" value="no" />
+                                    <span>No</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Do you take medicine or BP?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="bp_medicine" value="yes" />
+                                    <span>Yes</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="bp_medicine" value="no" />
+                                    <span>No</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4> <i class="material-icons prefix">thumb_up</i> You have completed Part 2!</h4>
+                        </div>
+
+                        <div class="tab">
+                             <h4>Overall, how would you rate the local hospitals in your area?</h4>
+                             <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="local_hospital_rating" type="radio"  value="excellent" />
+                                        <span>Excellent</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="local_hospital_rating" type="radio"  value="good" />
+                                        <span>Good</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="local_hospital_rating" type="radio"  value="fair" />
+                                        <span>Fair</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="local_hospital_rating" type="radio"  value="poor" />
+                                        <span>Poor</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="local_hospital_rating" type="radio"  value="not_sure" />
+                                        <span>Not sure</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab">
+                            <h4>Does the hospital you regularly visit have equipment for modern diagnosis and treatment?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="hospital_equipped" type="radio"  value="yes" />
+                                        <span>Yes</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="hospital_equipped" type="radio"  value="no" />
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="hospital_equipped" type="radio"  value="not_sure" />
+                                        <span>Not Sure</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>How much time does it take to reach to the nearest hospital/ clinic?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="hospital_travel_time" type="radio"  value="5-10m" />
+                                        <span>5 - 10 mins</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="hospital_travel_time" type="radio"  value="10-20m" />
+                                        <span>10 - 20 mins</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="hospital_travel_time" type="radio"  value="20-60m" />
+                                        <span>20  mins to 1 hr</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="hospital_travel_time" type="radio"  value="more_than_60m" />
+                                        <span>more than 1 hour</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Do you have a personal family doctor?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="personal_doc" type="radio"  value="yes" />
+                                        <span>Yes</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="personal_doc" type="radio"  value="no" />
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Access to primary health care team?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="primary_healthcare_team_access" type="radio"  value="yes" />
+                                        <span>Yes</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="primary_healthcare_team_access" type="radio"  value="no" />
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>How long do you have to wait in normal and emergency conditions?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="hospital_wait_time" type="radio"  value="15m" />
+                                        <span>15 mins</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="hospital_wait_time" type="radio"  value="30m" />
+                                        <span>30 mins</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="hospital_wait_time" type="radio"  value="45m" />
+                                        <span>45 mins</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="hospital_wait_time" type="radio"  value="60m" />
+                                        <span>60 mins</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>In case of illness, where do you go for treatment?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="illness_treatment_place" type="radio"  value="govt_hospital" />
+                                        <span>Government hospitals</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="illness_treatment_place" type="radio"  value="govt_dispensary" />
+                                        <span>Government dispensary</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="illness_treatment_place" type="radio"  value="phc" />
+                                        <span>PHC</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="illness_treatment_place" type="radio"  value="medical_store" />
+                                        <span>Medical store</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="illness_treatment_place" type="radio"  value="ngo_hospital" />
+                                        <span>NGO clinic/ hospital</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="illness_treatment_place" type="radio"  value="homeopathy" />
+                                        <span>Vaidya/ hakim/ homeopathy</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Why don't the family members go to government facility in case of sickness?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="why_govt_facility_not_used" type="radio"  value="not_nearby" />
+                                        <span>No nearby facility</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="why_govt_facility_not_used" type="radio"  value="long_wait_time" />
+                                        <span>Waiting time too long</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="why_govt_facility_not_used" type="radio"  value="poor_quality" />
+                                        <span>Poor quality of care</span>
+                                    </label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input name="why_govt_facility_not_used" type="text" />
+                                    <label for="why_govt_facility_not_used">Other reasons</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Do you have awareness towards health insurance?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="awareness_towards_insurance" type="radio"  value="yes" />
+                                        <span>Yes</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="awareness_towards_insurance" type="radio"  value="no" />
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Is any member covered by health insurance? If yes, then what type of health insurance do you have?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="insurance_type" type="radio"  value="government" />
+                                        <span>Government insurance</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="insurance_type" type="radio"  value="private" />
+                                        <span>Private Insurance</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="insurance_type" type="radio"  value="none" />
+                                        <span>No health insurance</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4><i class="material-icons prefix">thumb_up</i> You have completed part 3!</h4>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Do you have thermometer at home?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="thermometer_at_home" type="radio"  value="yes" />
+                                        <span>Yes</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="thermometer_at_home" type="radio"  value="no" />
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Do you have access to filter water?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="filtered_water_access" type="radio"  value="yes" />
+                                        <span>Yes</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="filtered_water_access" type="radio"  value="no" />
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Do you have first-aid kit at home?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="first_aid_kit_at_home" type="radio"  value="yes" />
+                                        <span>Yes</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="first_aid_kit_at_home" type="radio"  value="no" />
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Air ventilation where you live is :</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="air_ventilation_quality" type="radio"  value="poor" />
+                                        <span>Poor</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="air_ventilation_quality" type="radio"  value="normal" />
+                                        <span>Normal</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="air_ventilation_quality" type="radio"  value="good" />
+                                        <span>Good</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="air_ventilation_quality" type="radio"  value="perfect" />
+                                        <span>Perfect</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Do you have a clean society?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="is_society_clean" type="radio"  value="yes" />
+                                        <span>Yes</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="is_society_clean" type="radio"  value="yes_but_not_completely" />
+                                        <span>Yes, but not completely</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="is_society_clean" type="radio"  value="no" />
+                                        <span>Not at all</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>What kind of toilet facility do members of your household usually use?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="toilet_type_used" type="radio"  value="public" />
+                                        <span>Public toilet</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="toilet_type_used" type="radio"  value="private" />
+                                        <span>Private toilet</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>What was the last time any checkup camps were held?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="last_checkup_camp_held" type="radio"  value="before_a_month" />
+                                        <span>Before a month</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="last_checkup_camp_held" type="radio"  value="before_two_months" />
+                                        <span>Before two months</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="last_checkup_camp_held" type="radio"  value="before_three_months" />
+                                        <span>Before three months</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="last_checkup_camp_held" type="radio"  value="before_six_months" />
+                                        <span>Before six months</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>What type of cooking fuel do you use?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="cooking_fuel_type_used" type="radio"  value="electricity" />
+                                        <span>Electricity</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="cooking_fuel_type_used" type="radio"  value="lpg" />
+                                        <span>LPG</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="cooking_fuel_type_used" type="radio"  value="kerosene" />
+                                        <span>Kerosene</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="cooking_fuel_type_used" type="radio"  value="wood" />
+                                        <span>Wood</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="cooking_fuel_type_used" type="radio"  value="dung_cake" />
+                                        <span>Dung cake</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Is cooking done in the same room where you live?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="is_cooking_done_in_living_room" type="radio"  value="yes" />
+                                        <span>Yes</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="is_cooking_done_in_living_room" type="radio"  value="no" />
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Do you have bank account?</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="bank_account" type="radio"  value="yes" />
+                                        <span>Yes</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="bank_account" type="radio"  value="no" />
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Type of the bank</h4>
+                            <div class="row">
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="bank_type" type="radio"  value="nationalized" />
+                                        <span>Nationalized bank</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="bank_type" type="radio"  value="private" />
+                                        <span>Private bank</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="bank_type" type="radio"  value="rural" />
+                                        <span>Rural bank</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="bank_type" type="radio"  value="others" />
+                                        <span>Others</span>
+                                    </label>
+                                </div>
+                                <div class="col s12">
+                                    <label>
+                                        <input class="with-gap" name="bank_type" type="radio"  value="none" />
+                                        <span>None</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab">
+                            <h4>Do you avail any government promotional policies?</h4>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap dis1" name="govt_policies_availed" value="central_govt_health_scheme"/>
+                                    <span>Central Government Health Scheme</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap dis1"  name="govt_policies_availed" value="rashtriya_swasthya_bima_yojana" />
+                                    <span>Rashtriya Swasthya Bima Yojana</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap dis1" name="govt_policies_availed" value="rajiv_gandhi_scheme" />
+                                    <span>Rajiv Gandhi Scheme (Sabla)</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap dis1" name="govt_policies_availed" value="pradhan_mantri_suraksha_bima_yojana"/>
+                                    <span>Pradhan Mantri Suraksha Bima Yojana</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap dis1"  name="govt_policies_availed" value="others" />
+                                    <span>Others</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" id="dis1_check" name="govt_policies_availed" value="None" onclick="disable1()" />
+                                    <span>None</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="tab">
+                            <h4><i class="material-icons prefix">done_all</i> All done!</h4>
+                        </div>
+
+					    <br><br>
+					    <div>
+    					   <button type="button" id="prevBtn" class="waves-effect waves-light btn" onclick="nextPrev(-1)"><span>Previous</span></button>
+    					   <button type="button" id="nextBtn" class="waves-effect waves-light btn" onclick="nextPrev(1)"><span>Next</span></button>
+  					    </div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	
+
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
