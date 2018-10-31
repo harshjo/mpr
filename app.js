@@ -25,7 +25,7 @@ app.post('/send-data', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log('Sent:', fileName);
+      console.log('Sent:');
     }
   });
 });

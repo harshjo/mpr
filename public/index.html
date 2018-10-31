@@ -7,15 +7,71 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script>
+    <!-- <script>
 
         function sendData() {
             const userData = {
                 first_name: document.querySelector('input[name="first_name"]').value,
-                last_name: document.querySelector('input[name="last_name"]').value
+                last_name: document.querySelector('input[name="last_name"]').value,
+                age: document.querySelector('input[name="age"]').value,
+                profession: document.querySelector('input[name="profession"]').value,
+                address: document.querySelector('input[name="address"]').value,
+                gender: document.querySelector('input[name="gender"]').value,
+                height: document.querySelector('input[name="height"]').value,
+                weight: document.querySelector('input[name="weight"]').value,
+                no_family_members: document.querySelector('input[name="no_family_members"]').value,
+                mon_fam_income: document.querySelector('input[name="mon_fam_income"]').value,
+                last_class_attended: document.querySelector('input[name="last_class_attended"]').value,
+                reason_to_join_school: document.querySelector('input[name="reason_to_join_school"]').value,
+                mem_first_name: document.querySelector('input[name="mem_first_name"]').value,
+                mem_last_name: document.querySelector('input[name="mem_last_name"]').value,
+                mem_relationship: document.querySelector('input[name="mem_relationship"]').value,
+                mem_age: document.querySelector('input[name="mem_age"]').value,
+                mem_gender: document.querySelector('input[name="mem_gender"]').value,
+                marital_status: document.querySelector('input[name="marital_status"]').value,
+                employment_status: document.querySelector('input[name="employment_status"]').value,
+                mem_uidai: document.querySelector('input[name="mem_uidai"]').value,
+                overall_health: document.querySelector('input[name="overall_health"]').value,
+                genetic_problems: document.querySelector('input[name="genetic_problems"]').value,
+                last_health_checkup: document.querySelector('input[name="last_health_checkup"]').value,
+                food_type: document.querySelector('input[name="food_type"]').value,
+                water_source: document.querySelector('input[name="water_source"]').value,
+                usually_faced_problems: document.querySelector('input[name="usually_faced_problems"]').value,
+                chronic_conditions: document.querySelector('input[name="chronic_conditions"]').value,
+                monthly_expenditure_on_health: document.querySelector('input[name="monthly_expenditure_on_health"]').value,
+                willing_daily_expenditure_on_health: document.querySelector('input[name="willing_daily_expenditure_on_health"]').value,
+                hospital_visit_freq: document.querySelector('input[name="hospital_visit_freq"]').value,
+                hospital_type_prefered: document.querySelector('input[name="hospital_type_prefered"]').value,
+                health_awareness: document.querySelector('input[name="health_awareness"]').value,
+                children_fully_immunized: document.querySelector('input[name="children_fully_immunized"]').value,
+                birth_control_options: document.querySelector('input[name="birth_control_options"]').value,
+                smoker: document.querySelector('input[name="smoker"]').value,
+                anemic: document.querySelector('input[name="anemic"]').value,
+                bp_medicine: document.querySelector('input[name="bp_medicine"]').value,
+                local_hospital_rating: document.querySelector('input[name="local_hospital_rating"]').value,
+                hospital_equipped: document.querySelector('input[name="hospital_equipped"]').value,
+                hospital_travel_time: document.querySelector('input[name="hospital_travel_time"]').value,
+                personal_doc: document.querySelector('input[name="personal_doc"]').value,
+                primary_healthcare_team_access: document.querySelector('input[name="primary_healthcare_team_access"]').value,
+                hospital_wait_time: document.querySelector('input[name="hospital_wait_time"]').value,
+                illness_treatment_place: document.querySelector('input[name="illness_treatment_place"]').value,
+                why_govt_facility_not_used: document.querySelector('input[name="why_govt_facility_not_used"]').value,
+                awareness_towards_insurance: document.querySelector('input[name="awareness_towards_insurance"]').value,
+                insurance_type: document.querySelector('input[name="insurance_type"]').value,
+                thermometer_at_home: document.querySelector('input[name="thermometer_at_home"]').value,
+                filtered_water_access: document.querySelector('input[name="filtered_water_access"]').value,
+                first_aid_kit_at_home: document.querySelector('input[name="first_aid_kit_at_home"]').value,
+                air_ventilation_quality: document.querySelector('input[name="air_ventilation_quality"]').value,
+                is_society_clean: document.querySelector('input[name="is_society_clean"]').value,
+                toilet_type_used: document.querySelector('input[name="toilet_type_used"]').value,
+                last_checkup_camp_held: document.querySelector('input[name="last_checkup_camp_held"]').value,
+                cooking_fuel_type_used: document.querySelector('input[name="cooking_fuel_type_used"]').value,
+                is_cooking_done_in_living_room: document.querySelector('input[name="is_cooking_done_in_living_room"]').value,
+                bank_account: document.querySelector('input[name="bank_account"]').value,
+                bank_type: document.querySelector('input[name="bank_type"]').value,
+                govt_policies_availed: document.querySelector('input[name="govt_policies_availed"]').value
             }
             $.ajax({
                 async: true,
@@ -34,14 +90,14 @@
                 }
             });
         }
-    </script>
+    </script> -->
 </head>
 
 <body>
     <!-- <h2 id="heading">Questionnaire for Primary Health Care Model</h2> -->
 
 
-    <form id="xform" onsubmit="sendData()">
+    <form id="xform">
         <div class="row">
             <div class="col s12">
                 <div class="card">
@@ -186,32 +242,32 @@
                             </div>
                         </div>
 
-                        <div class="tab" id="mem_details">
+                        <!-- <div class="tab" id="mem_details">
                             <h4>Details of family member(s)</h4>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input name="mem_first_name" type="text">
+                                    <input name="mem_first_name" type="text" value="x">
                                     <label for="mem_first_name">First Name</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input name="mem_last_name" type="text">
+                                    <input name="mem_last_name" type="text" value="x">
                                     <label for="mem_last_name">Last Name</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input name="mem_relationship" type="text">
+                                    <input name="mem_relationship" type="text" value="x">
                                     <label for="mem_relationship">Relationship</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input type="number" name="age" min="1" max="110">
-                                    <label for="age">Age</label>
+                                    <input type="number" name="mem_age" min="1" max="110" value="10">
+                                    <label for="mem_age">Age</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col s6">
                                     <label>
-                                        <input class="with-gap" name="mem_gender" type="radio" value="male" />
+                                        <input class="with-gap" name="mem_gender" type="radio" value="male" checked />
                                         <span>Male</span>
                                     </label>
                                 </div>
@@ -225,7 +281,7 @@
                             <div class="row">
                                 <div class="col s6">
                                     <label>
-                                        <input class="with-gap" name="marital_status" type="radio" value="married" />
+                                        <input class="with-gap" name="marital_status" type="radio" value="married" checked/>
                                         <span>Married</span>
                                     </label>
                                 </div>
@@ -256,7 +312,7 @@
                                     <label for="mem_uidai">Aadhar number</label>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="tab">
                             <h4> <i class="material-icons prefix">thumb_up</i> You have completed Part 1!</h4>
@@ -317,12 +373,18 @@
                                     <span>Thalesemia</span>
                                 </label>
                             </p>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input type="text" name="genetic_problems">
-                                    <label for="genetic_problems">Others</label>
-                                </div>
-                            </div>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="genetic_problems" value="others" />
+                                    <span>Others</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="radio" class="with-gap" name="genetic_problems" value="none" />
+                                    <span>None</span>
+                                </label>
+                            </p>
                         </div>
 
                         <div class="tab">
@@ -738,7 +800,7 @@
                         </div>
 
                         <div class="tab">
-                            <h4>Do you take medicine or BP?</h4>
+                            <h4>Do you take medicine for BP?</h4>
                             <p>
                                 <label>
                                     <input type="radio" class="with-gap" name="bp_medicine" value="yes" />
@@ -1334,7 +1396,7 @@
                             <p>
                                 <label>
                                     <input type="radio" class="with-gap" id="dis1_check" name="govt_policies_availed"
-                                        value="None" onclick="disable1()" />
+                                        value="None" />
                                     <span>None</span>
                                 </label>
                             </p>
@@ -1358,7 +1420,6 @@
 
 
     <script type="text/javascript" src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </body>
