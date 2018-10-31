@@ -11,10 +11,12 @@
         crossorigin="anonymous"></script>
 
     <script>
-        const data = {
-            first_name: document.querySelector('input[name="first_name"]').value
-        }
+
         function sendData() {
+            const userData = {
+                first_name: document.querySelector('input[name="first_name"]').value,
+                last_name: document.querySelector('input[name="last_name"]').value
+            }
             $.ajax({
                 async: true,
                 crossDomain: true,
@@ -23,7 +25,7 @@
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
-                data: data,
+                data: userData,
                 success: function (response) {
                     console.log(response);
                 },
@@ -58,7 +60,7 @@
 
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input onchange="sendData()" name="first_name" type="text">
+                                    <input name="first_name" type="text">
                                     <label for="first_name">First Name</label>
                                 </div>
                                 <div class="input-field col s6">
